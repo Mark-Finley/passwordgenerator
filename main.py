@@ -1,16 +1,22 @@
-# This is a sample Python script.
+import string
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def generate():
+    s1 = string.ascii_uppercase
+    s2 = string.ascii_lowercase
+    s3 = string.digits
+    s4 = string.punctuation
 
+    passwordLength = int(input("Enter the password length\n"))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    suggestedPassword = []
+    suggestedPassword.extend(list(s1))
+    suggestedPassword.extend(list(s2))
+    suggestedPassword.extend(list(s3))
+    suggestedPassword.extend(list(s4))
 
+    random.shuffle(suggestedPassword)
+    password = ("".join(suggestedPassword[0:passwordLength]))
+    print(password)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+generate()
