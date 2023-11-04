@@ -7,16 +7,16 @@ def generate():
     s3 = string.digits
     s4 = string.punctuation
 
-    passwordLength = int(input("Enter the password length\n"))
+    password_length = int(input("Enter the password length\n"))
 
-    suggestedPassword = []
-    suggestedPassword.extend(list(s1))
-    suggestedPassword.extend(list(s2))
-    suggestedPassword.extend(list(s3))
-    suggestedPassword.extend(list(s4))
+    suggested_password = []
+    suggested_password.extend(list(s1))
+    suggested_password.extend(list(s2))
+    suggested_password.extend(list(s3))
+    suggested_password.extend(list(s4))
 
-    random.shuffle(suggestedPassword)
-    password = ("".join(suggestedPassword[0:passwordLength]))
+    random.shuffle(suggested_password)
+    password = ("".join(suggested_password[0:password_length]))
     print(password)
 
 generate()
